@@ -1,0 +1,130 @@
+
+--================================================================
+-- HOW TO RUN AUTOMATION WITH REPORTS
+--================================================================
+In order to run the Automation script and receive the reports you will
+test
+
+1) Open the Project using your IDE Intelli J
+2) On the bottom select "Terminal"
+3) Insert the following Code
+
+
+//To run a specif test just run (Registration):
+	
+
+	gradle clean test --tests *families_editstatus_childcard_add_personalinformation_fieldvalidation_Runner aggregate --info
+	gradle clean test --tests *registration_familyinformation_Runner aggregate --info
+	gradle clean test --tests *registration_payments_Runner aggregate --info
+	gradle clean test --tests *registration_programRunner aggregate --info
+	gradle clean test --tests *registration_familyinformation_image_Runner aggregate --info
+
+//To run a specif test just run (Employees):
+	gradle clean test --tests *employees_addmedical_AllergyCondition_Runner aggregate --info
+
+
+
+//To run a specif test just run (Families):
+
+	gradle clean test --tests *families_updatechildprograms_Runner aggregate --info
+	gradle clean test --tests *families_updatechildprogram_addchild_Runner aggregate --info
+	gradle clean test --tests *families_editstatus_updatefamilycard_addchild_Runner aggregate --info
+	gradle clean test --tests *families_editstatus_childcard_add_shedule_attendance_Runner aggregate --info
+
+
+//To run all of the test in a folder:
+
+    gradle clean test --tests *runner.dashboard* aggregate --info
+    gradle clean test --tests *runner.families* aggregate --info
+    gradle clean test --tests *runner.login* aggregate --info
+    gradle clean test --tests *runner.registration* aggregate --info
+    gradle clean test --tests *runner.reports* aggregate --info
+    gradle clean test --tests *runner.families* aggregate --info
+
+ //To Run all Initial Open Tests
+
+    gradle clean test --tests *runner.reports* --tests *runner.dashboard* --tests *runner.employees* --tests *runner.billing*  aggregate --info
+
+//To Run all Tests:
+
+gradle clean test --tests *runner.*  aggregate --info
+
+--================================================================
+-- HOW TO OPEN THE REPORT ON MAC
+--================================================================
+
+ ./gradlew clean test --tests *runner.*  aggregate --info
+./gradlew clean test --tests *dashboard_openpage_Runner aggregate --info
+
+--================================================================
+-- HOW TO OPEN THE REPORT
+--================================================================
+
+After the test has ran open you will:
+
+1) Go to Windows Explorer
+2) Open path 
+ex: C:\Users\DEV_OPS\Desktop\BitbucketRepository_Personal\core-automation-v2\CoreProductionFile\target\site\serenity
+3) Select File "Index"
+
+--================================================================
+-- HOW TO CREATE STEP DEFINITIONS
+--================================================================
+
+In order to create Step Defintions you will: 
+
+1) Create your feature
+2) Create your runner 
+3) Insert the following code into the Terminal
+
+gradle clean test --tests *NameofRunner aggregate -i
+
+4) After running step 3, you will see the code built in the runner
+
+--================================================================
+-- HOW TO STOP CMD RUNNER
+--================================================================
+
+CTRL + C
+
+
+--================================================================
+-- HOW TO LINE UP ROWS
+--================================================================
+
+CTRL + ALT + L
+
+--================================================================
+-- HOW TO ELIMINATE UNNECSSARY IMPORTS
+--================================================================
+
+CTRL + ALT + O
+--================================================================
+-- HOW TO STOP CHROMEDRIVER
+--================================================================
+
+RUN THIS IN COMMAND
+taskkill /im chromedriver.exe /f
+
+--================================================================
+-- HOW TO ADD COLORS TO NOTES
+--================================================================
+                //adding "\033[34m" makes the notes blue in the Run window \033[0;31m
+                //https://stackoverflow.com/questions/5947742/how-to-change-the-output-color-of-echo-in-linux/24584513
+                //https://stackoverflow.com/questions/5762491/how-to-print-color-in-console-using-system-out-println
+                    System.out.println("\033[37;44;1m Feature Variable DiscountList  :"+discountStandard);
+
+   --================================================================
+   -- HOW TO OPEN THE REPORT ON MAC
+   --================================================================
+
+    ./gradlew clean test --tests *runner.*  aggregate --info
+   ./gradlew clean test --tests *dashboard_openpage_Runner aggregate --info
+
+    --tests *InsertCapturedStatisticsData_Runner aggregate --info
+
+gradle test --tests OpenSite_runner aggregate --info
+
+
+
+./gradlew test --tests "InsertCapturedStatisticsData_Runner" aggregate --info
