@@ -27,9 +27,10 @@ financial data from NCLH
 1. Open the Src Folder
 2. Open the Test Folder
 3. Open the Java Folder
-4. Open th Google Test Class
-5. Right Click
-6. Run 
+4. Open the Folder Runner
+5. Open the Class "Insert Captured Statistics Data Runner"
+6. Right Click
+7. Run 
 
 
 #### How To Run From Terminal
